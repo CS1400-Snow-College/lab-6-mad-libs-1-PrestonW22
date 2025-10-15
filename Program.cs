@@ -32,3 +32,5 @@ string originalStory = "A vacation is when you take a trip to some (adjective) p
             }
         }
 
+Console.WriteLine("\nNew Story:\n");
+Console.WriteLine(newStory);

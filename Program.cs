@@ -13,4 +13,22 @@ string originalStory = "A vacation is when you take a trip to some (adjective) p
 
         string newStory = "";
 
-       
+        foreach (string part in parts)
+        {
+            string trimmed = part.Trim();
+
+            if (trimmed.StartsWith("(") && trimmed.EndsWith(")"))
+            {
+                string placeholder = trimmed.Trim('(', ')');
+
+                Console.Write($"Please enter a {placeholder}: ");
+                string input = Console.ReadLine()!;
+
+                newStory += input + " ";
+            }
+            else
+            {
+                newStory += trimmed + " ";
+            }
+        }
+
